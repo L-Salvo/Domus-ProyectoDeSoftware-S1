@@ -49,7 +49,40 @@
             <p>Obras y diseños con foco en funcionalidad, estética y eficiencia. Explorá en detalle una selección de
                 trabajos de Domus.</p>
         </div>
-        <a aria-label="Ir al contenido" class="scroll-cue" href="#listado">▾</a>
+        <a aria-label="Ir al filtro" class="scroll-cue" href="#filtros-proyectos">▾</a>
+    </section>
+
+    <section aria-label="Filtrar proyectos por tipo" class="proyectos-filtro section">
+        <div class="container">
+            <form class="filtros" id="filtros-proyectos">
+                <div class="filtro-dropdown">
+                    <input hidden id="toggle-filtro" type="checkbox">
+                    <label aria-expanded="false" aria-haspopup="true" class="filtro-trigger" for="toggle-filtro">
+                        <span>Filtrar por tipo</span>
+                        <span class="caret">▾</span>
+                    </label>
+                    <div class="filtro-panel">
+                        <fieldset class="filtro-options">
+                            <legend class="sr-only">Tipo de proyecto</legend>
+                            <label class="option"><input class="categoria" id="f-residencial" type="checkbox">
+                                Residencial</label>
+                            <label class="option"><input class="categoria" id="f-urbano" type="checkbox"> Urbano</label>
+                            <label class="option"><input class="categoria" id="f-comercial" type="checkbox">
+                                Comercial</label>
+                            <label class="option"><input class="categoria" id="f-sostenible" type="checkbox"> Sostenible</label>
+                            <label class="option"><input class="categoria" id="f-cultural" type="checkbox">
+                                Cultural</label>
+                        </fieldset>
+                        <div class="filtro-actions">
+                            <input hidden id="aplicar" type="checkbox">
+                            <label class="pf-btn pf-btn--apply" for="aplicar" role="button">Aplicar</label>
+                            <label class="pf-btn pf-btn--edit" for="aplicar" role="button">Editar</label>
+                            <button class="pf-btn pf-btn--clear" type="reset">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
 
     <section class="proyectos-lista" id="listado">
@@ -153,7 +186,7 @@
                     <h2 class="proyecto-titulo">Torre Corporativa Central</h2>
 
                     <div class="proyecto-media">
-                        <img alt="Paseo Costero Río, intervención urbana" loading="lazy"
+                        <img alt="Torre Corporativa Central, fachada vidriada" loading="lazy"
                              src="https://assets.hassellstudio.com/imager/uploads/Sixty-Martin-Place-Mark-Syke-39-cropped_dae9d742f19b6d4d8e59504c1a71c1db.jpg">
                     </div>
 
@@ -196,11 +229,11 @@
                 </article>
 
                 <!-- Proyecto 4 -->
-                <article class="proyecto restauracion urbana">
+                <article class="proyecto urbano">
                     <h2 class="proyecto-titulo">Renovación Urbana Centro</h2>
 
                     <div class="proyecto-media">
-                        <img alt="Paseo Costero Río, intervención urbana" loading="lazy"
+                        <img alt="Renovación Urbana Centro, explanada peatonal" loading="lazy"
                              src="https://assets.hassellstudio.com/imager/uploads/SydneyAirport-hero2-mid_2024-05-23-060703_whlu_e86bd4a6d02e0c9fb7293fdbaf550166.jpg">
                     </div>
 
@@ -244,11 +277,11 @@
                 </article>
 
                 <!-- Proyecto 5 -->
-                <article class="proyecto restauracion urbana">
+                <article class="proyecto cultural">
                     <h2 class="proyecto-titulo">Centro Cultural Metropolitano</h2>
 
                     <div class="proyecto-media">
-                        <img alt="Paseo Costero Río, intervención urbana" loading="lazy"
+                        <img alt="Centro Cultural Metropolitano, exterior" loading="lazy"
                              src="https://blog.adonline.id.au/images/Ivanhoe_Library_Cultural_Hub_01.png">
                     </div>
 
