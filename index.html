@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domus Arquitectura & Construcción</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/pages/home.css">
 </head>
 <body>
     <!-- Header -->
@@ -14,6 +19,8 @@
                 <div class="logo">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/domus_logo_celeste-uxxEAMXVJSRg6RXeiTRGvUPnzdPHJH.png" alt="Domus Logo" class="logo-img">
                 </div>
+                <!-- Added checkbox for CSS-only hamburger menu -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li><a href="#servicios" class="nav-link">Servicios</a></li>
@@ -22,11 +29,12 @@
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
                 <button class="cta-button">Consulta Gratuita</button>
-                <div class="hamburger">
+                <!-- Changed hamburger to label for CSS-only functionality -->
+                <label for="nav-toggle" class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </label>
             </div>
         </nav>
     </header>
@@ -254,7 +262,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
