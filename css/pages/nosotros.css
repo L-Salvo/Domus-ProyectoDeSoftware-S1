@@ -1,0 +1,121 @@
+/* Hero con imagen de fondo */
+.about-hero {
+  position: relative;
+  height: 100vh; /* ocupa toda la pantalla */
+  background: url('../../img/inicio_nosotros.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* oscurece la foto */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  animation: slideUp 1.0s ease-out forwards;
+}
+
+.hero-logo {
+  max-width: 410px;
+  margin-bottom: 1rem;
+}
+
+.hero-desc {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+/* Animación */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== EQUIPO (minimal + circular portraits) ===== */
+.team { padding: 72px 0; background: #fff; }
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 72px; height: 2px;
+  background: var(--primary-color);
+  margin: 10px auto 0;
+  opacity: .6;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card vertical, centrada */
+.member {
+  text-align: center;
+  padding: 22px 18px;
+  border: 1px solid #e9ecef;
+  border-radius: 14px;
+  background: #fff;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.member:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+
+/* Foto circular */
+.member-photo {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto 14px;
+  border: 3px solid #fff;                /* borde interno limpio */
+  box-shadow: 0 0 0 2px rgba(33,150,243,.35); /* anillo sutil corporativo */
+}
+
+/* Tipografía y jerarquía */
+.member-name { 
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+.member-role  { 
+  color: var(--primary-dark);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.member-bio   { 
+  color: var(--text-light);
+  font-size: .96rem;
+  line-height: 1.55;
+}
+
+/* Responsive */
+@media (max-width: 1024px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px)  { .team-grid { grid-template-columns: 1fr; } }
