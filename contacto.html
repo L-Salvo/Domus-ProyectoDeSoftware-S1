@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contacto — Domus Arquitectura & Construcción</title>
+    <!-- Estilos globales y componentes reutilizables -->
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/components/header.css" rel="stylesheet">
+    <link href="css/components/nav.css" rel="stylesheet">
+    <link href="css/components/footer.css" rel="stylesheet">
+    <!-- Estilos específicos de la página de contacto -->
+    <link href="css/pages/contacto.css" rel="stylesheet">
+    <link as="image" href="img/domus_logo_celeste.png" rel="preload">
+    <link as="image" href="img/domus_logo_blanco.png" rel="preload">
+    <meta content="Ponete en contacto con Domus Arquitectura & Construcción. Envíanos tu consulta o proyecto."
+          name="description">
+</head>
+<body class="page-contacto">
+<!-- Header -->
+<header class="header">
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img alt="Domus Logo" class="logo-img" src="img/domus_logo_celeste.png">
+            </div>
+            <input class="nav-toggle" id="nav-toggle" type="checkbox">
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="index.html">Inicio</a></li>
+                <li><a class="nav-link" href="servicios.html">Servicios</a></li>
+                <li><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                <li><a class="nav-link" href="index.html#equipo">Nosotros</a></li>
+                <li><a class="nav-link is-active" href="contacto.html">Contacto</a></li>
+            </ul>
+            <label class="hamburger" for="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+
+
+</header>
+
+<main>
+    <!-- Contacto Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para hacer realidad tu proyecto arquitectónico</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Ubicación</h3>
+                        <p>Av. Arquitectura 123<br>Ciudad, País</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Teléfono</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>info@domusarquitectura.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a class="social-link" href="#">Facebook</a>
+                        <a class="social-link" href="#">Instagram</a>
+                        <a class="social-link" href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input id="name" name="name" placeholder="Nombre completo" required type="text">
+                    </div>
+                    <div class="form-group">
+                        <input id="email" name="email" placeholder="Correo electrónico" required type="email">
+                    </div>
+                    <div class="form-group">
+                        <input id="phone" name="phone" placeholder="Teléfono" type="tel">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Cuéntanos sobre tu proyecto" required
+                                  rows="5"></textarea>
+                    </div>
+                    <button class="btn-primary" type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img alt="Domus Logo" class="logo-img" src="img/domus_logo_blanco.png">
+            </div>
+            <p>&copy; 2024 Domus Arquitectura & Construcción. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
