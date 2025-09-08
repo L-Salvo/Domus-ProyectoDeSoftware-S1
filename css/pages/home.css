@@ -165,6 +165,12 @@
   margin-bottom: 0.5rem;
 }
 
+/* Action button under projects list */
+.projects .section-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 /* Team Section */
 .team {
   background: var(--bg-light);
