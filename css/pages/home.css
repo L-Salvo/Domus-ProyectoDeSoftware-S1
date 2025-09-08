@@ -89,10 +89,8 @@
 }
 
 .icon-code::before {
-    content: "</>";
-    color: var(--text-white);
+    content: "🎬";
     font-size: 1.5rem;
-    font-weight: bold;
 }
 
 .icon-building::before {
@@ -101,7 +99,7 @@
 }
 
 .icon-logistics::before {
-    content: "📋";
+    content: "🌳";
     font-size: 1.5rem;
 }
 

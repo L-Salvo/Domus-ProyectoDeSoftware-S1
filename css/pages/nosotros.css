@@ -52,7 +52,7 @@
 }
 
 /* ===== EQUIPO (minimal + circular portraits) ===== */
-.team { padding: 72px 0; background: #fff; }
+.team { padding: 0px 0px 72px 0px; background: #fff; }
 
 .section-title {
   text-align: center;
@@ -182,56 +182,125 @@
   .about-domus-wrap{ grid-template-columns:1fr; }
   .about-visual{ min-height:320px; }
 }
-/* ===== MISIÓN & VISIÓN (split con divisor) ===== */
-.mv-split { padding: 80px 0; background: #fff; }
+/* ===== MISIÓN & VISIÓN (elegante + color) ===== */
+:root{
+  /* si ya existen en tu base.css, se usan; sino estos son fallbacks */
+  --primary-color: #2196f3;
+  --primary-dark:  #1976d2;
+  --accent-color:  #00bcd4; /* para Vision */
+}
 
+.mv-split{
+  padding: 60px 0;
+  /* fondo con gradiente suave corporativo + blanco */
+  background:
+    radial-gradient(140% 100% at 50% 0%,
+      rgba(33,150,243,.12) 0%,
+      rgba(33,150,243,0) 55%) ,
+    #fff;
+}
+
+/* Contenedor en 2 columnas con divisor */
 .mv-grid{
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 0;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 28px rgba(0,0,0,.06);
 }
 
-/* divisor vertical al centro */
+/* Divisor vertical con degradado */
 .mv-grid::before{
-  content:""; position:absolute; left:50%; top:0; bottom:0;
-  width:1px; background:#e6e9ef; transform:translateX(-.5px);
+  content:"";
+  position:absolute; left:50%; top:0; bottom:0;
+  width:2px;
+  background: linear-gradient(to bottom,
+              transparent,
+              rgba(33,150,243,.35),
+              transparent);
+  transform: translateX(-1px);
 }
 
+/* Panel base tipo "glass" (deja ver el fondo/imagen con tinte) */
 .mv-panel{
   position: relative;
-  min-height: 360px;
-  padding: 40px 32px;
-  display: flex; align-items: center; justify-content: center;
-  background:linear-gradient(180deg, var(--primary-color), var(--primary-dark)); color:#1f2937;
+  
+  min-height: 420px;
+  display:flex; align-items:center; justify-content:center;
+  padding: 56px 36px;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(6px);
+  isolation:isolate;
 }
 
-/* fondos sutiles por columna (opcional) */
+/* Capa de imagen + tinte de color por mitad */
 .mv-mision::before, .mv-vision::before{
-  content:""; position:absolute; inset:0; z-index:0; opacity:.10;
-  background-size:cover; background-position:center; filter:grayscale(100%);
+  content:""; position:absolute; inset:0; z-index:0;
+  background-size: cover; background-position: center;
+  mix-blend-mode: multiply; /* fusiona el tinte con la foto */
+  opacity: .22;             /* intensidad del color */
+  filter: grayscale(30%);
 }
-.mv-mision::before { background-image:url('../../img/mision.jpg'); }
-.mv-vision::before { background-image:url('../../img/vision.jpg'); }
+.mv-mision::before{
+  background-image:
+    linear-gradient(135deg, var(--primary-color), transparent 65%),
+    url('../../img/mision.jpg');
+}
+.mv-vision::before{
+  background-image:
+    linear-gradient(225deg, var(--accent-color), transparent 65%),
+    url('../../img/vision.jpg');
+}
 
-.mv-content{ position:relative; z-index:1; max-width:560px; text-align:center; }
+
+.mv-content{
+  position:relative; z-index:1;
+  max-width: 560px;
+  text-align: center;
+}
+
 .mv-eyebrow{
-  letter-spacing:.08em; text-transform:uppercase; font-size:1.5rem;
-  color:white; font-weight: bold; margin-bottom:1.0rem;
+  display:inline-block;
+  letter-spacing:.08em; text-transform:uppercase;
+  font-size:.92rem; font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom:.5rem;
 }
 .mv-title{
-  color: var(--text-white);
+  color: #0f172a; /* muy oscuro para contraste */
   font-weight: 700;
-  font-size: 1.75rem;
-  line-height: 1.25;
-  margin: 0 0 .5rem;
+  font-size: 2rem;
+  line-height: 1.22;
+  margin: 0 0 .65rem;
 }
-.mv-content p{ color:var(--text-white); line-height:1.75; }
+.mv-text{
+  color: #4b5563;
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
 
+/* Badges con tinte suave */
+.mv-badges{
+  display:flex; flex-wrap:wrap; gap:10px;
+  justify-content:center; margin-top:.6rem;
+}
+.mv-badges li{
+  list-style:none;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:.92rem;
+  color:#2b4a63;
+  background: linear-gradient( to bottom right,
+              rgba(33,150,243,.10), rgba(33,150,243,.03) );
+  border:1px solid rgba(33,150,243,.22);
+}
+
+/* Responsive */
 @media (max-width: 900px){
   .mv-grid{ grid-template-columns:1fr; }
-  .mv-grid::before{ display:none; } /* sin divisor en mobile */
-  .mv-panel{ min-height:auto; padding:32px 22px; }
+  .mv-grid::before{ display:none; }
+  .mv-panel{ min-height:auto; padding: 40px 20px; }
+  .mv-mision::after, .mv-vision::after{ font-size:120px; inset:auto auto 6% 4%; }
 }
