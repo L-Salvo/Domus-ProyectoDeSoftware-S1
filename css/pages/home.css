@@ -36,27 +36,7 @@
     flex-wrap: wrap;
 }
 
-.hero-indicators {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-}
-
-.indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.indicator.active {
-    background: var(--text-white);
-}
+/* Removed carousel indicators styles */
 
 /* Services Section */
 .services {
