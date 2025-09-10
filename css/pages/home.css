@@ -169,6 +169,12 @@
     text-align: center;
 }
 
+/* Action button under services list */
+.services .section-actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
 /* Team Section */
 .team {
     background: var(--bg-light);
