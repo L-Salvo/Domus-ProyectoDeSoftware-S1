@@ -5,7 +5,7 @@
     display: grid;
     place-items: center;
     /* Igual que home: gradiente + imagen */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://archicgi.com/wp-content/uploads/2020/06/market-architectural-services-tips-1024x576.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/fondo-proyectos.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -35,12 +35,19 @@
 
 /* Breakpoints iguales a home */
 @media (max-width: 768px) {
-    .proyectos-hero .hero-content h1 { font-size: 2.5rem; }
-    .proyectos-hero .hero-content p { font-size: 1.1rem; }
+    .proyectos-hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .proyectos-hero .hero-content p {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .proyectos-hero .hero-content h1 { font-size: 2rem; }
+    .proyectos-hero .hero-content h1 {
+        font-size: 2rem;
+    }
 }
 
 

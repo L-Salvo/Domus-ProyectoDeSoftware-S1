@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images.squarespace-cdn.com/content/v1/542032d5e4b0968055ce5118/1728939289427-NQC4FMCNBBOSUPD7WQ1W/image-asset.jpeg?format=2500w");
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/fondo-home.jpeg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -41,8 +41,14 @@
 
 /* Hero entrance animation (match other pages) */
 @keyframes slideUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Services Section */
