@@ -44,15 +44,7 @@
 }
 
 
-.proyectos-hero .scroll-cue {
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: rgba(255, 255, 255, .9);
-    text-decoration: none;
-}
+/* Scroll cue eliminado del hero de proyectos */
 
 /* Animación igual a Nosotros */
 @keyframes slideUp {
