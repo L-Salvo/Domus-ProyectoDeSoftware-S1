@@ -34,6 +34,8 @@
 .hero-contact {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                 url("https://images.squarespace-cdn.com/content/v1/542032d5e4b0968055ce5118/1728939350233-HCFN3C4B8CYD91V1DSZ9/image-asset.jpeg?format=2500w");
+    background-size: cover;
+    background-position: center;
 }
 
 @keyframes slideUp {

@@ -112,12 +112,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .35s ease;
 }
 
-.proyecto:hover .proyecto-media img {
-    transform: scale(1.03);
-}
+/* Se elimina la animación/escala en hover sobre la imagen principal */
 
 /* Descripción breve (centrada bajo la imagen) */
 .proyecto-descripcion {
