@@ -72,6 +72,11 @@
     row-gap: clamp(12px, 1.8vw, 18px);
 }
 
+/* Offset de anclaje para header fijo */
+.proyecto {
+    scroll-margin-top: 90px;
+}
+
 /* Título centrado */
 .proyecto-titulo {
     grid-area: title;
