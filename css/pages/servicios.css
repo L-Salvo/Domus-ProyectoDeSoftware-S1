@@ -1,4 +1,58 @@
 
+/* Hero (idéntico a home/proyectos en tamaños y animación) */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-white);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: slideUp 1.0s ease-out forwards;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Fondo específico del hero de servicios (gradiente igual a home) */
+.hero-services {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("https://images.squarespace-cdn.com/content/v1/542032d5e4b0968055ce5118/1728939496365-6V2TTCQEYSSSJPYY3RQ0/Sweetwater_MainHouseEntry_Final_2.jpg?format=2500w");
+}
+
+/* Animación (misma que nosotros/proyectos) */
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: igual a home */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2rem; }
+  .hero-content { padding: 0 1rem; }
+}
+
 .services-page {
   padding-top: 2rem;
 }

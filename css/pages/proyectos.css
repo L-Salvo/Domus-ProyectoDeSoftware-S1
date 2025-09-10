@@ -4,33 +4,43 @@
     min-height: 100vh;
     display: grid;
     place-items: center;
-    background: url("https://archicgi.com/wp-content/uploads/2020/06/market-architectural-services-tips-1024x576.jpeg") center/cover no-repeat;
+    /* Igual que home: gradiente + imagen */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://archicgi.com/wp-content/uploads/2020/06/market-architectural-services-tips-1024x576.jpeg");
+    background-size: cover;
+    background-position: center;
 }
 
-.proyectos-hero .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, .35));
-}
+/* Overlay separado eliminado: ahora se usa capa de background como en home */
 
 .proyectos-hero .hero-content {
     position: relative;
     color: var(--text-white, #fff);
     text-align: center;
     padding: 1rem;
+    animation: slideUp 1.0s ease-out forwards;
 }
 
 .proyectos-hero .hero-content h1 {
-    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    font-size: 3.5rem; /* igual que home */
 }
 
 
 .proyectos-hero .hero-content p {
     max-width: 760px;
     color: var(--text-white, #fff);
-    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    font-size: 1.3rem; /* igual que home */
     text-shadow: 0 2px 12px rgba(0, 0, 0, .45);
     opacity: 1;
+}
+
+/* Breakpoints iguales a home */
+@media (max-width: 768px) {
+    .proyectos-hero .hero-content h1 { font-size: 2.5rem; }
+    .proyectos-hero .hero-content p { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+    .proyectos-hero .hero-content h1 { font-size: 2rem; }
 }
 
 
@@ -42,6 +52,18 @@
     font-size: 2rem;
     color: rgba(255, 255, 255, .9);
     text-decoration: none;
+}
+
+/* Animación igual a Nosotros */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ==============================================
