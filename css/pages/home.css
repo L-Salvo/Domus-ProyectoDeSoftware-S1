@@ -162,6 +162,12 @@
     text-align: center;
 }
 
+/* Action button under team list */
+.team .section-actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
 /* Team Section */
 .team {
     background: var(--bg-light);
