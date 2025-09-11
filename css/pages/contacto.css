@@ -149,3 +149,17 @@ body.page-contacto main {
         padding: 0 1rem;
     }
 }
+
+/* Mapa de contacto */
+.contact-map {
+    margin-top: 3rem;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: clamp(260px, 45vh, 480px);
+    border: 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+    display: block;
+}
