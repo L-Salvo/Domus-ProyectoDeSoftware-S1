@@ -86,23 +86,26 @@ body.page-contacto main {
 .social-links {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    --icon-size: 40px;
 }
 
-.social-link {
-    color: var(--primary-color);
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.social-link:hover {
-    color: var(--primary-dark);
+/* Iconos como PNG */
+.social-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: inline-block;
+    object-fit: contain;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+/* Asegurar que el botón quede al fondo de la columna */
+.contact-form .btn-primary {
+    margin-top: auto;
 }
 
 .form-group {
@@ -117,6 +120,7 @@ body.page-contacto main {
     border-radius: var(--border-radius);
     font-size: 1rem;
     transition: var(--transition);
+    resize: none;
 }
 
 .form-group input:focus,
@@ -162,4 +166,9 @@ body.page-contacto main {
     border-radius: var(--border-radius);
     box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
     display: block;
+}
+
+/* Evitar que el hover suba el botón (desalineando con iconos) */
+body.page-contacto .btn-primary:hover {
+    transform: none;
 }
