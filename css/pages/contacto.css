@@ -159,6 +159,48 @@ body.page-contacto main {
     margin-top: 3rem;
 }
 
+/* Modal de confirmación */
+#modal-enviado[hidden] {
+    display: none;
+}
+
+#modal-enviado {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#modal-enviado .modal-card {
+    background: #fff;
+    width: min(520px, 92vw);
+    border-radius: var(--border-radius);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
+    padding: 24px 22px;
+    text-align: center;
+}
+
+#modal-enviado .modal-card h3 {
+    color: var(--text-dark);
+    margin-bottom: .5rem;
+}
+
+#modal-enviado .modal-card p {
+    margin-bottom: 1rem;
+}
+
+#modal-enviado .modal-actions {
+    margin-top: .5rem;
+}
+
+/* Bloquear scroll del body cuando el modal está abierto */
+body.page-contacto.modal-open {
+    overflow: hidden;
+}
+
 .contact-map iframe {
     width: 100%;
     height: clamp(260px, 45vh, 480px);

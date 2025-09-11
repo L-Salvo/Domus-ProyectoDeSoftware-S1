@@ -80,7 +80,7 @@
                         <img alt="LinkedIn" class="social-icon" src="/img/iconos_redes/linkedin.png"/>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <div class="form-group">
                         <input id="name" name="name" placeholder="Nombre completo" required type="text">
                     </div>
@@ -125,5 +125,51 @@
     </div>
 
 </footer>
+
+<!-- Modal de confirmación de envío -->
+<div class="modal-overlay" hidden id="modal-enviado">
+    <div aria-labelledby="modal-enviado-title" aria-modal="true" class="modal-card" role="dialog">
+        <h3 id="modal-enviado-title">Mensaje enviado</h3>
+        <p>Gracias por tu mensaje. Te responderemos a la brevedad.</p>
+        <div class="modal-actions">
+            <button class="btn-primary" id="btn-aceptar" type="button">Aceptar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+        const modal = document.getElementById('modal-enviado');
+        const acceptBtn = document.getElementById('btn-aceptar');
+        if (!form || !modal || !acceptBtn) return;
+
+        function openModal() {
+            modal.hidden = false;
+            document.body.classList.add('modal-open');
+            acceptBtn.focus();
+        }
+
+        function closeModal() {
+            modal.hidden = true;
+            document.body.classList.remove('modal-open');
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            form.reset();
+            openModal();
+        });
+
+        acceptBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeModal();
+        });
+    });
+</script>
 </body>
 </html>
