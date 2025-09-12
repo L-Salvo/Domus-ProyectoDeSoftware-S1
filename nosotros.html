@@ -1,195 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nosotros - Domus Arquitectura & Construcción</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Nosotros - Domus Arquitectura & Construcción</title>
 
-  <!-- Estilos globales de tu proyecto -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components/header.css">
-  <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/footer.css">
+    <!-- Estilos globales de tu proyecto -->
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/components/header.css" rel="stylesheet">
+    <link href="css/components/nav.css" rel="stylesheet">
+    <link href="css/components/footer.css" rel="stylesheet">
+    <link href="css/components/hero.css" rel="stylesheet">
 
-  <!-- Estilos propios de esta página -->
-  <link rel="stylesheet" href="css/pages/nosotros.css">
+    <!-- Estilos propios de esta página -->
+    <link href="css/pages/nosotros.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header / Nav -->
-  <header class="header">
+<!-- Header / Nav -->
+<header class="header">
     <nav class="nav">
-      <div class="nav-container">
-        <a class="logo" href="index.html" aria-label="Ir al inicio">
-          <img src="img/domus_logo_celeste.png" alt="Domus Logo" class="logo-img">
-        </a>
+        <div class="nav-container">
+            <a aria-label="Ir al inicio" class="logo" href="index.html">
+                <img alt="Domus Logo" class="logo-img" src="img/domus_logo_celeste.png">
+            </a>
 
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Inicio</a></li>
-          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-          <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
-          <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
-          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-        </ul>
-        <label for="nav-toggle" class="hamburger">
-          <span></span><span></span><span></span>
-        </label>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main -->
-  <main class="about-page">
-
-    <section class="about-hero">
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <img src="img/domus_logo_blanco.png" alt="Domus Logo" class="hero-logo">
-          <p class="hero-desc">Soluciones arquitectónicas innovadoras y sostenibles para mejorar la calidad de vida de las personas.</p>
+            <input class="nav-toggle" id="nav-toggle" type="checkbox">
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="index.html">Inicio</a></li>
+                <li><a class="nav-link" href="servicios.html">Servicios</a></li>
+                <li><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                <li><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+                <li><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+            <label class="hamburger" for="nav-toggle">
+                <span></span><span></span><span></span>
+            </label>
         </div>
-      </div>
+    </nav>
+</header>
+
+<!-- Main -->
+<main class="about-page">
+
+    <section class="hero hero-nosotros" id="nosotros-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <img alt="Domus Arquitectura & Construcción" class="hero-logo" src="img/domus_logo_blanco.png">
+            </h1>
+            <p class="hero-subtitle">Soluciones arquitectónicas innovadoras y sostenibles para mejorar la calidad de
+                vida de las personas.</p>
+        </div>
     </section>
 
     <section class="about-domus elegant" id="sobre-domus">
-      <div class="container">
-        <h2 class="section-title">Sobre Domus</h2>
+        <div class="container">
+            <h2 class="section-title">Sobre Domus</h2>
 
-        <p class="lead" style="text-align: center; padding-top: 15px;">
-          Domus Arquitectura & Construcción diseña, planifica y ejecuta proyectos
-          residenciales y comerciales integrando eficiencia, calidad y comunicación clara.
-        </p>
-        <p style="text-align: center; padding-bottom: 15px;">
-          Combinamos diseño arquitectónico, consultoría en construcción sostenible,
-          dirección de obra y visualización 3D para reducir incertidumbre y tomar
-          decisiones con información precisa desde el inicio.
-        </p>
+            <p class="lead" style="text-align: center; padding-top: 15px;">
+                Domus Arquitectura & Construcción diseña, planifica y ejecuta proyectos
+                residenciales y comerciales integrando eficiencia, calidad y comunicación clara.
+            </p>
+            <p style="text-align: center; padding-bottom: 15px;">
+                Combinamos diseño arquitectónico, consultoría en construcción sostenible,
+                dirección de obra y visualización 3D para reducir incertidumbre y tomar
+                decisiones con información precisa desde el inicio.
+            </p>
 
-        <div class="about-domus-wrap">
-          <figure class="about-visual">
-            <img src="img/about-domus.png" alt="Estudio Domus: maqueta, planos y luz natural" />
-          </figure>
+            <div class="about-domus-wrap">
+                <figure class="about-visual">
+                    <img alt="Estudio Domus: maqueta, planos y luz natural" src="img/about-domus.png"/>
+                </figure>
 
-          <div class="about-copy">
-            <h4>Nuestra motivación</h4>
-            <ul class="ticks">
-              <li><strong>Calidad y detalle</strong>: documentación clara y control de obra consistentes.</li>
-              <li><strong>Eficiencia y transparencia</strong>: cronogramas, costos y reportes accionables.</li>
-              <li><strong>Sostenibilidad</strong>: estrategias pasivas y materiales responsables.</li>
-              <li><strong>Innovación digital</strong>: renders, maquetas virtuales y recorridos 3D.</li>
-              <li><strong>Enfoque humano</strong>: espacios que mejoran la vida cotidiana y el entorno.</li>
-            </ul>
+                <div class="about-copy">
+                    <h4>Nuestra motivación</h4>
+                    <ul class="ticks">
+                        <li><strong>Calidad y detalle</strong>: documentación clara y control de obra consistentes.</li>
+                        <li><strong>Eficiencia y transparencia</strong>: cronogramas, costos y reportes accionables.
+                        </li>
+                        <li><strong>Sostenibilidad</strong>: estrategias pasivas y materiales responsables.</li>
+                        <li><strong>Innovación digital</strong>: renders, maquetas virtuales y recorridos 3D.</li>
+                        <li><strong>Enfoque humano</strong>: espacios que mejoran la vida cotidiana y el entorno.</li>
+                    </ul>
 
-            <blockquote class="about-quote">
-              “Arquitectura que une rigor técnico y empatía con las personas.”
-            </blockquote>
-          </div>
+                    <blockquote class="about-quote">
+                        “Arquitectura que une rigor técnico y empatía con las personas.”
+                    </blockquote>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Misión y Visión (versión elegante) -->
-  <section class="mv-split" id="mision-vision">
-    <div class="container">
-      <h2 class="section-title" style="margin-bottom: 30px;">Misión y Visión</h2>
+    <section class="mv-split" id="mision-vision">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 30px;">Misión y Visión</h2>
 
-      <div class="mv-grid">
-        <!-- MITAD IZQUIERDA -->
-        <article class="mv-panel mv-mision">
-          <div class="mv-content">
-            <span class="mv-eyebrow">Misión</span>
-            <h3 class="mv-title">Diseñar y construir arquitectura que eleve la vida</h3>
-            <p class="mv-text">
-              Integramos rigor técnico, eficiencia energética y una gestión transparente
-              de punta a punta para convertir ideas en proyectos factibles, medibles y
-              sostenibles. Nuestro enfoque combina diseño, coordinación de obra y
-              visualización 3D para tomar decisiones con información clara desde el inicio.
-            </p>
+            <div class="mv-grid">
+                <!-- MITAD IZQUIERDA -->
+                <article class="mv-panel mv-mision">
+                    <div class="mv-content">
+                        <span class="mv-eyebrow">Misión</span>
+                        <h3 class="mv-title">Diseñar y construir arquitectura que eleve la vida</h3>
+                        <p class="mv-text">
+                            Integramos rigor técnico, eficiencia energética y una gestión transparente
+                            de punta a punta para convertir ideas en proyectos factibles, medibles y
+                            sostenibles. Nuestro enfoque combina diseño, coordinación de obra y
+                            visualización 3D para tomar decisiones con información clara desde el inicio.
+                        </p>
 
-            <ul class="mv-badges">
-              <li>Calidad medible</li>
-              <li>Eficiencia energética</li>
-              <li>Gestión transparente</li>
-            </ul>
-          </div>
-        </article>
+                        <ul class="mv-badges">
+                            <li>Calidad medible</li>
+                            <li>Eficiencia energética</li>
+                            <li>Gestión transparente</li>
+                        </ul>
+                    </div>
+                </article>
 
-        <!-- MITAD DERECHA -->
-        <article class="mv-panel mv-vision">
-          <div class="mv-content">
-            <span class="mv-eyebrow">Visión</span>
-            <h3 class="mv-title">Ser referente regional en innovación responsable</h3>
-            <p class="mv-text">
-              Liderar en Latinoamérica por excelencia técnica y experiencia del cliente,
-              impulsando ciudades más humanas y eficientes mediante procesos digitales,
-              colaboración interdisciplinaria y compromiso ambiental a largo plazo.
-            </p>
+                <!-- MITAD DERECHA -->
+                <article class="mv-panel mv-vision">
+                    <div class="mv-content">
+                        <span class="mv-eyebrow">Visión</span>
+                        <h3 class="mv-title">Ser referente regional en innovación responsable</h3>
+                        <p class="mv-text">
+                            Liderar en Latinoamérica por excelencia técnica y experiencia del cliente,
+                            impulsando ciudades más humanas y eficientes mediante procesos digitales,
+                            colaboración interdisciplinaria y compromiso ambiental a largo plazo.
+                        </p>
 
-            <ul class="mv-badges">
-              <li>Innovación digital</li>
-              <li>Impacto urbano</li>
-              <li>Sostenibilidad</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+                        <ul class="mv-badges">
+                            <li>Innovación digital</li>
+                            <li>Impacto urbano</li>
+                            <li>Sostenibilidad</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
     <!-- Team Section -->
     <section class="team" id="equipo">
-      <div class="container">
-        <h2 class="section-title">Nuestro equipo</h2>
+        <div class="container">
+            <h2 class="section-title">Nuestro equipo</h2>
 
-        <div class="team-grid">
-          <article class="member">
-            <img src="https://kmai.com/images/2023/11/Jessie_web-portrait_2024.2.jpg" alt="María González" class="member-photo" />
-            <h3 class="member-name">María González</h3>
-            <p class="member-role">Arquitecta Principal</p>
-            <p class="member-bio">
-              Lidera el diseño desde el anteproyecto hasta la documentación ejecutiva.
-              Facilita workshops con clientes, asegura cumplimiento normativo y coordina
-              disciplinas para garantizar que la solución final sea funcional, estética
-              y viable de construir.
-            </p>
-          </article>
+            <div class="team-grid">
+                <article class="member">
+                    <img alt="María González" class="member-photo"
+                         src="https://kmai.com/images/2023/11/Jessie_web-portrait_2024.2.jpg"/>
+                    <h3 class="member-name">María González</h3>
+                    <p class="member-role">Arquitecta Principal</p>
+                    <p class="member-bio">
+                        Lidera el diseño desde el anteproyecto hasta la documentación ejecutiva.
+                        Facilita workshops con clientes, asegura cumplimiento normativo y coordina
+                        disciplinas para garantizar que la solución final sea funcional, estética
+                        y viable de construir.
+                    </p>
+                </article>
 
-          <article class="member">
-            <img src="https://kmai.com/images/2019/03/sm/Dan-McNeil-scaled.jpg" alt="Carlos Rodríguez" class="member-photo" />
-            <h3 class="member-name">Carlos Rodríguez</h3>
-            <p class="member-role">Ingeniero de Construcción</p>
-            <p class="member-bio">
-              Planifica cronogramas, presupuestos y contratistas. Implementa controles
-              de calidad, seguridad y avance, con reportes claros sobre plazos, costos
-              y alcance para una toma de decisiones oportuna durante la obra.
-            </p>
-          </article>
+                <article class="member">
+                    <img alt="Carlos Rodríguez" class="member-photo"
+                         src="https://kmai.com/images/2019/03/sm/Dan-McNeil-scaled.jpg"/>
+                    <h3 class="member-name">Carlos Rodríguez</h3>
+                    <p class="member-role">Ingeniero de Construcción</p>
+                    <p class="member-bio">
+                        Planifica cronogramas, presupuestos y contratistas. Implementa controles
+                        de calidad, seguridad y avance, con reportes claros sobre plazos, costos
+                        y alcance para una toma de decisiones oportuna durante la obra.
+                    </p>
+                </article>
 
-          <article class="member">
-            <img src="https://kmai.com/images/2019/03/sm/Natalie-Krakovsky-scaled.jpg" alt="Ana Martínez" class="member-photo" />
-            <h3 class="member-name">Ana Martínez</h3>
-            <p class="member-role">Planificadora Urbana</p>
-            <p class="member-bio">
-              Produce renders fotorrealistas, maquetas virtuales y recorridos 3D que
-              permiten validar materiales, iluminación y distribución antes de construir,
-              reduciendo cambios tardíos y mejorando la comunicación del proyecto.
-            </p>
-          </article>
+                <article class="member">
+                    <img alt="Ana Martínez" class="member-photo"
+                         src="https://kmai.com/images/2019/03/sm/Natalie-Krakovsky-scaled.jpg"/>
+                    <h3 class="member-name">Ana Martínez</h3>
+                    <p class="member-role">Planificadora Urbana</p>
+                    <p class="member-bio">
+                        Produce renders fotorrealistas, maquetas virtuales y recorridos 3D que
+                        permiten validar materiales, iluminación y distribución antes de construir,
+                        reduciendo cambios tardíos y mejorando la comunicación del proyecto.
+                    </p>
+                </article>
+            </div>
         </div>
-      </div>
     </section>
 
-  </main>
+</main>
 
-  <!-- Footer -->
-  <footer class="footer">
+<!-- Footer -->
+<footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="img/domus_logo_blanco.png" alt="Domus Logo" class="logo-img">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img alt="Domus Logo" class="logo-img" src="img/domus_logo_blanco.png">
+            </div>
+            <p>&copy; 2025 Domus Arquitectura & Construcción. Todos los derechos reservados.</p>
         </div>
-        <p>&copy; 2025 Domus Arquitectura & Construcción. Todos los derechos reservados.</p>
-      </div>
     </div>
 </footer>
 <script src="js/backToTop.js"></script>
