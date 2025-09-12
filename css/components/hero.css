@@ -1,0 +1,54 @@
+/* Hero: estilos comunes centralizados */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-white);
+    position: relative;
+}
+
+.hero .hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+    animation: slideUp 1.0s ease-out forwards;
+}
+
+.hero .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animación reutilizada por todas las páginas */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Breakpoints comunes del hero */
+@media (max-width: 768px) {
+    .hero .hero-title { font-size: 2.5rem; }
+    .hero .hero-subtitle { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+    .hero .hero-title { font-size: 2rem; }
+    .hero .hero-content { padding: 0 1rem; }
+}
+

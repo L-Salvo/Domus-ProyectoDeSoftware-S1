@@ -1,68 +1,8 @@
-/* ---------- HERO a pantalla completa ---------- */
-.proyectos-hero.hero-full {
-    position: relative;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
+/* ---------- HERO de Proyectos (unificado) ---------- */
+.hero-proyectos {
     /* Igual que home: gradiente + imagen */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/fondo-proyectos.jpg");
-    background-size: cover;
-    background-position: center;
-}
 
-/* Overlay separado eliminado: ahora se usa capa de background como en home */
-
-.proyectos-hero .hero-content {
-    position: relative;
-    color: var(--text-white, #fff);
-    text-align: center;
-    padding: 1rem;
-    animation: slideUp 1.0s ease-out forwards;
-}
-
-.proyectos-hero .hero-content h1 {
-    font-size: 3.5rem; /* igual que home */
-}
-
-
-.proyectos-hero .hero-content p {
-    max-width: 760px;
-    color: var(--text-white, #fff);
-    font-size: 1.3rem; /* igual que home */
-    text-shadow: 0 2px 12px rgba(0, 0, 0, .45);
-    opacity: 1;
-}
-
-/* Breakpoints iguales a home */
-@media (max-width: 768px) {
-    .proyectos-hero .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .proyectos-hero .hero-content p {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .proyectos-hero .hero-content h1 {
-        font-size: 2rem;
-    }
-}
-
-
-/* Scroll cue eliminado del hero de proyectos */
-
-/* Animación igual a Nosotros */
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* ==============================================

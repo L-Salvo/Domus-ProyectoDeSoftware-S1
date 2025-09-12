@@ -1,69 +1,12 @@
 /* Contacto: estilos específicos de la página */
 
-/* Hero a pantalla completa (consistente con Servicios y Proyectos) */
-.hero {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-white);
-    position: relative;
-}
-
-.hero-content {
-    max-width: 800px;
-    padding: 0 2rem;
-    animation: slideUp 1.0s ease-out forwards;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
-}
+/* Hero a pantalla completa: estilos comunes en css/components/hero.css */
 
 .hero-contact {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("/img/fondo-contacto.jpeg");
-    background-size: cover;
-    background-position: center;
 }
 
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Sticky footer solo para la página de contacto */
-body.page-contacto {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-body.page-contacto main {
-    flex: 1 0 auto;
-}
-
-/* Reducir el espacio inmediatamente antes del footer en esta vista */
-.contact {
-    padding: 80px 0; /* balance entre header y footer */
-}
 
 .contact-content {
     display: grid;
@@ -86,23 +29,26 @@ body.page-contacto main {
 .social-links {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    --icon-size: 40px;
 }
 
-.social-link {
-    color: var(--primary-color);
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.social-link:hover {
-    color: var(--primary-dark);
+/* Iconos como PNG */
+.social-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: inline-block;
+    object-fit: contain;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+/* Asegurar que el botón quede al fondo de la columna */
+.contact-form .btn-primary {
+    margin-top: auto;
 }
 
 .form-group {
@@ -117,6 +63,7 @@ body.page-contacto main {
     border-radius: var(--border-radius);
     font-size: 1rem;
     transition: var(--transition);
+    resize: none;
 }
 
 .form-group input:focus,
@@ -126,14 +73,6 @@ body.page-contacto main {
 }
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -141,11 +80,65 @@ body.page-contacto main {
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
+}
 
-    .hero-content {
-        padding: 0 1rem;
-    }
+/* Mapa de contacto */
+.contact-map {
+    margin-top: 3rem;
+}
+
+/* Modal de confirmación */
+#modal-enviado[hidden] {
+    display: none;
+}
+
+#modal-enviado {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#modal-enviado .modal-card {
+    background: #fff;
+    width: min(520px, 92vw);
+    border-radius: var(--border-radius);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
+    padding: 24px 22px;
+    text-align: center;
+}
+
+#modal-enviado .modal-card h3 {
+    color: var(--text-dark);
+    margin-bottom: .5rem;
+}
+
+#modal-enviado .modal-card p {
+    margin-bottom: 1rem;
+}
+
+#modal-enviado .modal-actions {
+    margin-top: .5rem;
+}
+
+/* Bloquear scroll del body cuando el modal está abierto */
+body.page-contacto.modal-open {
+    overflow: hidden;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: clamp(260px, 45vh, 480px);
+    border: 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+    display: block;
+}
+
+/* Evitar que el hover suba el botón (desalineando con iconos) */
+body.page-contacto .btn-primary:hover {
+    transform: none;
 }

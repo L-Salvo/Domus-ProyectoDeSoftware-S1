@@ -10,6 +10,7 @@
     <link href="css/components/header.css" rel="stylesheet">
     <link href="css/components/nav.css" rel="stylesheet">
     <link href="css/components/footer.css" rel="stylesheet">
+    <link href="css/components/hero.css" rel="stylesheet">
     <!-- Estilos específicos de la página de contacto -->
     <link href="css/pages/contacto.css" rel="stylesheet">
     <link as="image" href="img/domus_logo_celeste.png" rel="preload">
@@ -74,13 +75,13 @@
                         <h3>Email</h3>
                         <p>info@domusarquitectura.com</p>
                     </div>
-                    <div class="social-links">
-                        <a class="social-link" href="#">Facebook</a>
-                        <a class="social-link" href="#">Instagram</a>
-                        <a class="social-link" href="#">LinkedIn</a>
+                    <div aria-label="Redes sociales" class="social-links">
+                        <img alt="Facebook" class="social-icon" src="/img/iconos_redes/facebook.png"/>
+                        <img alt="Instagram" class="social-icon" src="/img/iconos_redes/instagram.png"/>
+                        <img alt="LinkedIn" class="social-icon" src="/img/iconos_redes/linkedin.png"/>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <div class="form-group">
                         <input id="name" name="name" placeholder="Nombre completo" required type="text">
                     </div>
@@ -96,7 +97,19 @@
                     </div>
                     <button class="btn-primary" type="submit">Enviar Mensaje</button>
                 </form>
+
             </div>
+            <div class="contact-map" id="contacto-mapa">
+                <div class="section-header">
+                    <h2>Ubicación</h2>
+                </div>
+
+                <iframe allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.3076068382254!2d-62.971771!3d-40.830575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ5JzUwLjEiUyA2MsKwNTgnMTguNCJX!5e0!3m2!1ses!2sar!4v1691111111111!5m2!1ses!2sar"
+                        style="border:0;"></iframe>
+            </div>
+
         </div>
     </section>
 </main>
@@ -113,5 +126,53 @@
     </div>
 
 </footer>
+
+<script src="js/backToTop.js"></script>
+
+<!-- Modal de confirmación de envío -->
+<div class="modal-overlay" hidden id="modal-enviado">
+    <div aria-labelledby="modal-enviado-title" aria-modal="true" class="modal-card" role="dialog">
+        <h3 id="modal-enviado-title">Mensaje enviado</h3>
+        <p>Gracias por tu mensaje. Te responderemos a la brevedad.</p>
+        <div class="modal-actions">
+            <button class="btn-primary" id="btn-aceptar" type="button">Aceptar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+        const modal = document.getElementById('modal-enviado');
+        const acceptBtn = document.getElementById('btn-aceptar');
+        if (!form || !modal || !acceptBtn) return;
+
+        function openModal() {
+            modal.hidden = false;
+            document.body.classList.add('modal-open');
+            acceptBtn.focus();
+        }
+
+        function closeModal() {
+            modal.hidden = true;
+            document.body.classList.remove('modal-open');
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            form.reset();
+            openModal();
+        });
+
+        acceptBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeModal();
+        });
+    });
+</script>
 </body>
 </html>
