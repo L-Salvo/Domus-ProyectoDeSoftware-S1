@@ -1,7 +1,7 @@
 /* ---------- HERO de Proyectos (unificado) ---------- */
 .hero-proyectos {
     /* Igual que home: gradiente + imagen */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/fondo-proyectos.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/fondo-proyectos.jpg");
 
 }
 

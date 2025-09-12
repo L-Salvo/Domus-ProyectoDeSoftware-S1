@@ -1,6 +1,6 @@
 /* Hero con imagen de fondo (unificado) */
 .hero-nosotros {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/inicio_nosotros.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../img/inicio_nosotros.jpg');
     background-size: cover;
     background-position: center;
 }

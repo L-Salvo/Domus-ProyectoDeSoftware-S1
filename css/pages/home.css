@@ -1,6 +1,6 @@
 /* Hero Section (fondo específico de Home) */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/fondo-home.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/fondo-home.jpeg");
 }
 
 .hero-buttons {
